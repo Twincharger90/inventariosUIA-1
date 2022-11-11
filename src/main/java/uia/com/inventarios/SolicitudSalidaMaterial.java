@@ -17,6 +17,13 @@ public class SolicitudSalidaMaterial extends InfoInventarioUIA {
         super(id, name, categoria, cantidad, idPartida, idSubpartida, idCategoria);
     }
 
+    public SolicitudSalidaMaterial(int id, String toString, String name, String categoria, String partida, String subpartida, String descripcion, String cantidad) {
+    }
+
+    public SolicitudSalidaMaterial() {
+
+    }
+
     public void serializa() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(new File("solicitudSalidaMaterial-1.json"), this);
